@@ -34,10 +34,10 @@ and "help wanted" is open to whoever wants to implement it.
 
 ## 撰写文件 Write Documentation
 
-geokg始终可以使用更多文档，无论是作为官方geokg文档，甚至是网络上博客文章中的文档，
+bayesianPrincipal始终可以使用更多文档，无论是作为官方bayesianPrincipal文档，甚至是网络上博客文章中的文档，
 文章等。
-geokg could always use more documentation, whether as part of the
-official geokg docs, in docstrings, or even on the web in blog posts,
+bayesianPrincipal could always use more documentation, whether as part of the
+official bayesianPrincipal docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 ## 提交反馈 Submit Feedback
@@ -49,7 +49,7 @@ The best way to send feedback is to file an issue on GitHub.
 * 详细说明它是如何工作的。
 * 尽量缩小范围，以使其易于实施。
 * 请记住，这是一个志愿者驱动的项目，欢迎大家参与 ：）
-  
+
 If you are proposing a feature:
 
 * Explain in detail how it would work.
@@ -59,8 +59,8 @@ If you are proposing a feature:
 
 ## 入门 Get Started
 
-准备贡献？ 这是为本地开发设置 `geokg` 的方法。
-Ready to contribute? Here's how to set up `geokg` for local development.
+准备贡献？ 这是为本地开发设置 `bayesianPrincipal` 的方法。
+Ready to contribute? Here's how to set up `bayesianPrincipal` for local development.
 
 1. 在GitHub上分叉仓库。
 2. 在本地克隆您的叉子。
@@ -78,5 +78,5 @@ Ready to contribute? Here's how to set up `geokg` for local development.
 
 ## 行为守则 Code of Conduct
 
-请注意，geokg项目是与[贡献者行为准则]（CONDUCT.md）一起发布的。 通过为该项目做贡献，您同意遵守其条款。
-Please note that the geokg project is released with a [Contributor Code of Conduct](CONDUCT.md). By contributing to this project you agree to abide by its terms.
+请注意，bayesianPrincipal项目是与[贡献者行为准则]（CONDUCT.md）一起发布的。 通过为该项目做贡献，您同意遵守其条款。
+Please note that the bayesianPrincipal project is released with a [Contributor Code of Conduct](CONDUCT.md). By contributing to this project you agree to abide by its terms.

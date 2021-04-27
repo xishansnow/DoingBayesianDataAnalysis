@@ -7,21 +7,21 @@ A book for beginners of geographical knowledge graph.
 ### 构建本书 Building the book
 
 如果您要继续开发并编译spaceSTAT_CN，则应该：
-If you'd like to develop on and build the geokg book, you should:
+If you'd like to develop on and build the bayesianPrincipal book, you should:
 
 - 克隆此仓库，并转到仓库根目录
 - 运行`pip install -r requirements.txt`（建议您在虚拟环境中执行此操作）
-- （推荐）删除现有的`geokg/_build/`目录
+- （推荐）删除现有的`bayesianPrincipal/_build/`目录
 -  运行`jupyter-book build spaceSTAT/`
 
 
 - Clone this repository, go to it's root directory
 - Run `pip install -r requirements.txt` (it is recommended you do this within a virtual environment)
-- (Recommended) Remove the existing `geokg/_build/` directory
-- Run `jupyter-book build geokg/`
+- (Recommended) Remove the existing `bayesianPrincipal/_build/` directory
+- Run `jupyter-book build bayesianPrincipal/`
 
-完整的HTML版本数据将创建在`geokg/_build/html/`文件夹内。
-A fully-rendered HTML version of the book will be built in `geokg/_build/html/`.
+完整的HTML版本数据将创建在`bayesianPrincipal/_build/html/`文件夹内。
+A fully-rendered HTML version of the book will be built in `bayesianPrincipal/_build/html/`.
 
 ### 发布本书 Hosting the book
 
@@ -35,15 +35,15 @@ If you wish to disable this automation, you may remove the GitHub actions workfl
 - 运行`ghp-import -n -p -f spaceSTAT/_build/html`
   
 - Navigating to your local build; and running,
-- `ghp-import -n -p -f geokg/_build/html`
+- `ghp-import -n -p -f bayesianPrincipal/_build/html`
 
 这将自动将您的构建推送到gh-pages分支。 有关此托管过程的更多信息，请参见[here](https://jupyterbook.org/publish/gh-pages.html#manually-host-your-book-with-github-pages)。
 This will automatically push your build to the `gh-pages` branch. More information on this hosting process can be found [here](https://jupyterbook.org/publish/gh-pages.html#manually-host-your-book-with-github-pages).
 
 ## 贡献者 Contributors
 
-我们欢迎并感谢您的所有贡献。 您可以在[贡献者标签](https://github.com/xishansnow/geokg/graphs/contributors)中查看当前贡献者的列表。
-We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/xishansnow/geokg/graphs/contributors).
+我们欢迎并感谢您的所有贡献。 您可以在[贡献者标签](https://github.com/xishansnow/bayesianPrincipal/graphs/contributors)中查看当前贡献者的列表。
+We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/xishansnow/bayesianPrincipal/graphs/contributors).
 
 ## 感谢 Credits
 
