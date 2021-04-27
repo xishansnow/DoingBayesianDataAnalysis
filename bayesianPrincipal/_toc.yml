@@ -1,74 +1,78 @@
 - file: preface
 
-- part:  '第一篇 基础知识篇'
-  numbered: true  
+- part:  '第一篇 基础篇'
+  # numbered: true  
   sections:
     #第一章 
     - file: part00_basic/chapter01
-      title: '概述'
+      # title: '概述'
     #第二章
     - file: part00_basic/chapter02
-      title: '可信度、模型和参数'
+      # title: '可信度、模型和参数'
+    #第二章
+    - file: part00_basic/chapter03
+      # title: 'R语言'
     #第四章
     - file: part00_basic/chapter04
-      title: '这个叫概率的东西到底是什么？'
+      # title: '这个叫概率的东西到底是什么？'
     #第五章
     - file: part00_basic/chapter05
-      title: '贝叶斯规则'
+      # title: '贝叶斯规则'
     
 
-- part:   '第二篇 贝叶斯原理'
-  numbered: true  
+- part:   '第二篇 原理篇'
+  # numbered: true  
   sections:
     #第六章
     - file: part01_bayesian/chapter06
-      title: '用精确数学分析进行二项概率推断'
+      # title: '用精确数学分析进行二项概率推断'
     #第七章
     - file: part01_bayesian/chapter07
-      title: '马尔可夫蒙特卡洛MCMC'
-    #第九章
+      # title: '马尔可夫蒙特卡洛MCMC'
+    #第九章    
+    - file: part01_bayesian/chapter08
+      # title: '贝叶斯层次模型'
+      #第九章
     - file: part01_bayesian/chapter09
-      title: '贝叶斯层次模型'
-
+      # title: '贝叶斯层次模型'
+      #第九章
+    - file: part01_bayesian/chapter10
+      # title: '贝叶斯层次模型'
+      #第九章
+    - file: part01_bayesian/chapter11
+      # title: '贝叶斯层次模型'
+      #第九章
+    - file: part01_bayesian/chapter12
+      # title: '贝叶斯层次模型'
+    - file: part01_bayesian/chapter13
+      # title: '贝叶斯层次模型'
+    - file: part01_bayesian/chapter14
+      # title: '贝叶斯层次模型'
     
 
-- part:   '第三篇 知识获取篇'
-  numbered: true  
+- part:   '第三篇 应用篇'
+  # numbered: true  
   sections:
-    - file: part02_harvest/content
-      sections:
-       - file: part02_harvest/abc01
-       - file: part02_harvest/abc02
-
-
-- part:   '第四篇 知识管理篇'
-  numbered: true  
-  sections:
-    - file: part03_manage/content
-      sections:
-      - file: part03_manage/abc01
-      - file: part03_manage/abc02
-
-- part:   '第五篇 知识问答篇'
-  numbered: true  
-  sections:
-    - file: part04_answer/content
-      sections:
-      - file: part04_answer/abc01
-      - file: part04_answer/abc02
-
-- part:   '第六篇 知识推理篇'
-  numbered: true  
-  sections:
-    - file: part05_reasoning/content
-      sections:
-      - file: part05_reasoning/abc01
-      - file: part05_reasoning/abc02
-
-- part:   '第七篇 知识挖掘篇'
-  numbered: true  
-  sections:
-    - file: part06_mining/content
-      sections:
-      - file: part06_mining/abc01
-      - file: part06_mining/abc02
+    - file: part02_application/chapter15
+      # title: '贝叶斯层次模型'      
+    - file: part02_application/chapter16
+      # title: '贝叶斯层次模型'
+    - file: part02_application/chapter17
+      # title: '贝叶斯层次模型'
+    - file: part02_application/chapter18
+      # title: '贝叶斯层次模型'
+    - file: part02_application/chapter19
+      # title: '贝叶斯层次模型'
+    - file: part02_application/chapter20
+      # title: '贝叶斯层次模型'
+    - file: part02_application/chapter21
+      # title: '贝叶斯层次模型'
+    - file: part02_application/chapter22
+      # title: '贝叶斯层次模型'
+    - file: part02_application/chapter23
+      # title: '贝叶斯层次模型'
+    - file: part02_application/chapter24
+      # title: '贝叶斯层次模型'
+    - file: part02_application/chapter25
+      # title: '贝叶斯层次模型'
+    
