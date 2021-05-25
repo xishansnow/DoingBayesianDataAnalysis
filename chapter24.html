@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; 贝叶斯统计原理</title>
+    <title>第 24 章 计数预测变量 &#8212; 贝叶斯统计原理</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,8 +49,10 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="第 25 章 其他工具" href="chapter25.html" />
+    <link rel="prev" title="第 23 章 定序预测变量" href="chapter23.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -176,7 +178,7 @@
   第三篇 应用篇
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="chapter15.html">
    第 15 章 广义线性模型概述
@@ -222,8 +224,8 @@
    第 23 章 定序预测变量
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="chapter24.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    第 24 章 计数预测变量
   </a>
  </li>
@@ -265,6 +267,23 @@
             </button>
             
             
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/chapter24.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
             <!-- Full screen (wrap in <a> to have style consistency -->
@@ -289,19 +308,40 @@
         
               <div>
                 
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="id1">
+<h1>第 24 章 计数预测变量<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<style>p{text-indent:2em;2}</style>
+<p>考虑这样一种情况，在这种情况下，我们观察到每个测量项目都有两个标称值。例如，假设有一次选举，我们对随机抽取的人进行调查，了解他们的政党背景(这是一个名义变量)和他们的候选人偏好(这也是一个名义变量)。每个人都会增加政党背景和候选人偏好的一种特定组合的数量。在整个样本中，结果是名义变量的每个值组合的计数表。计数是我们试图预测的，名义变量是预测者。这就是本章讨论的情况类型。传统上，这种数据结构可以用独立性的卡方检验来处理。但我们将采用贝叶斯方法，因此不需要计算卡方或p值(除了与练习24.3中的贝叶斯结论进行比较外)。贝叶斯分析提供了丰富的信息，包括关于节理比例和任何所需条件比较的可信区间。</p>
+<p>在第15章介绍的广义线性模型(GLM)的背景下，本章的情况涉及一个预测值，该预测值是一个计数，对于该预测值，我们将使用指数形式的逆链接函数和泊松分布来描述数据中的噪声，如T表15.2(p.443)的最后一行所示。有关本章预测变量和预测变量的组合如何与其他组合相关的提示，请参阅T able15.3(第444页)。</p>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="chapter23.html" title="previous page">第 23 章 定序预测变量</a>
+    <a class='right-next' id="next-link" href="chapter25.html" title="next page">第 25 章 其他工具</a>
 
         </div>
         

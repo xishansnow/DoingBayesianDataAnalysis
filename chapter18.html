@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; 贝叶斯统计原理</title>
+    <title>第 18 章 使用多个连续预测器的连续预测变量 &#8212; 贝叶斯统计原理</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,8 +49,10 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="第 19 章 只有一个定类预测器的连续预测变量" href="chapter19.html" />
+    <link rel="prev" title="第 17 章 使用一个连续预测器的连续预测变量" href="chapter17.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -176,7 +178,7 @@
   第三篇 应用篇
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="chapter15.html">
    第 15 章 广义线性模型概述
@@ -192,8 +194,8 @@
    第 17 章 使用一个连续预测器的连续预测变量
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="chapter18.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    第 18 章 使用多个连续预测器的连续预测变量
   </a>
  </li>
@@ -265,6 +267,23 @@
             </button>
             
             
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/chapter18.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
             <!-- Full screen (wrap in <a> to have style consistency -->
@@ -289,19 +308,40 @@
         
               <div>
                 
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="id1">
+<h1>第 18 章 使用多个连续预测器的连续预测变量<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<style>p{text-indent:2em;2}</style>
+<p>在本章中，我们关注要预测的值在公制尺度上的情况，并且有几个预测器，每个预测器也都在公制尺度上。例如，我们可以根据一个人的高中平均绩点(GPA)和学业能力倾向测试(SAT)分数来预测他(她)的大学平均绩点(GPA)。另一种情况是根据一个人的身高和体重预测他或她的血压。我们将考虑预测变量是预测因素的相加组合的模型，所有这些预测因素都对预测有比例影响。这种模型被称为多元线性回归。我们还将考虑预测器的非加性组合，这称为交互作用</p>
+<p>在第15章介绍的广义线性模型(GLM)的背景下，本章的情况涉及多个度量预测器的线性函数，如T表15.1(p.434)第四列所示，链接函数是描述数据中噪声的正态分布(或类似的)的同一性，如T表15.2(p.443)的第一行所示。有关本章预测变量和预测变量的组合如何与其他组合相关的提示，请参阅T able15.3(第444页)。如果您想简单介绍一下贝叶斯方法，并以多元线性回归为指导示例，请参阅Kruschke等人的文章。(2012年)。关于这篇文章的补充材料可以在WEB网站http://www.Indiana.edu/kruschke/bmlr/上找到，其中bmlr代表贝叶斯多元线性回归。</p>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="chapter17.html" title="previous page">第 17 章 使用一个连续预测器的连续预测变量</a>
+    <a class='right-next' id="next-link" href="chapter19.html" title="next page">第 19 章 只有一个定类预测器的连续预测变量</a>
 
         </div>
         

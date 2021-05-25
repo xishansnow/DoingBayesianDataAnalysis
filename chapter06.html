@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; 贝叶斯统计原理</title>
+    <title>第 6 章 用精确的数学分析得到二项概率推断 &#8212; 贝叶斯统计原理</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,8 +49,10 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="第 7 章 马尔可夫蒙特马洛MCMC" href="chapter07.html" />
+    <link rel="prev" title="第 5 章 贝叶斯规则" href="chapter05.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -124,9 +126,9 @@
   第二篇 原理篇
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="chapter06.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    第 6 章 用精确的数学分析得到二项概率推断
   </a>
  </li>
@@ -265,6 +267,23 @@
             </button>
             
             
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/chapter06.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
             <!-- Full screen (wrap in <a> to have style consistency -->
@@ -281,6 +300,19 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   6.1 似然函数：伯努利分布
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -289,19 +321,45 @@
         
               <div>
                 
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="id1">
+<h1>第 6 章 用精确的数学分析得到二项概率推断<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<style>p{text-indent:2em;2}</style>
+<p>本章提供了一个例子，说明如何使用纯分析数学进行贝叶斯推理，而不需要任何近似。最终，我们不会将纯分析方法用于复杂的应用程序，但本章很重要，原因有两个。首先，本章中相对简单的数学很好地揭示了关于连续参数的贝叶斯推理的基本概念。这些简单的公式表明，随着数据的积累，可信度的持续分配是如何系统性地变化的。这些示例为后续的近似方法提供了重要的概念基础，因为这些示例让您清楚地了解要近似的内容。其次，本章介绍的发行版，特别是 Beta 发行版，将在后续章节中重复使用。</p>
+<p>我们继续讨论观察数据有两个名义水平的情况，我们想要估计这两种可能结果的潜在概率。一个典型的例子是掷硬币，在这种情况下，观察到的结果可能是正面或反面，我们想要估计这两种结果的潜在概率。正如前面所强调的(例如，第 73 页第 4.1.1 节)，硬币仅仅代表我们关心的真实应用，例如估计药物的成功概率，或考试正确的概率，或人被左撇子使用的概率，或篮球运动员罚球成功的概率，或婴儿是女孩的概率，或心脏手术患者在手术后存活一年以上的概率，或一个人同意调查陈述的概率，或者装配线上的部件出现故障的概率，等等。当我们谈论硬币的正面和反面时，请记住，这些方法也可以应用到许多其他有趣的现实世界中。</p>
+<p>在这种情况下，我们要求每个基准的可能性空间只有两个互斥的值。这两个值彼此之间没有顺序或度量关系，它们只是名义上的值。因为有两个标称值，我们将这类数据称为“二分法”、“两个水平的标称值”或“二项式”。“。我们还假设每个观测数据是相互独立的。通常，我们也会假设潜在的概率随着时间的推移是稳定的。抛硬币是这种情况的标准例子：有两种可能的结果(正面或尾部)，我们假设抛硬币是相互独立的，获得头部的概率随着时间的推移是固定的。</p>
+<p>在贝叶斯分析中，我们首先对硬币正面朝上的可能性进行一些事先的可信度分配。然后，我们观察一些数据，这些数据由抛硬币的一组结果组成。然后，利用贝叶斯准则推导可信度的后验分布。贝叶斯法则要求我们指定似然函数，这是下一节的主题。</p>
+<div class="section" id="id2">
+<h2>6.1 似然函数：伯努利分布<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="chapter05.html" title="previous page">第 5 章 贝叶斯规则</a>
+    <a class='right-next' id="next-link" href="chapter07.html" title="next page">第 7 章 马尔可夫蒙特马洛MCMC</a>
 
         </div>
         

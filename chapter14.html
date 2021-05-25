@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; 贝叶斯统计原理</title>
+    <title>第 14 章 PyStan软件包 &#8212; 贝叶斯统计原理</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,8 +49,12 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="第 15 章 广义线性模型概述" href="chapter15.html" />
+    <link rel="prev" title="第 13 章 目的、动力和样本量" href="chapter13.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -124,7 +128,7 @@
   第二篇 原理篇
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="chapter06.html">
    第 6 章 用精确的数学分析得到二项概率推断
@@ -165,8 +169,8 @@
    第 13 章 目的、动力和样本量
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="chapter14.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    第 14 章 PyStan软件包
   </a>
  </li>
@@ -265,6 +269,23 @@
             </button>
             
             
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/chapter14.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
             <!-- Full screen (wrap in <a> to have style consistency -->
@@ -289,19 +310,48 @@
         
               <div>
                 
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="pystan">
+<h1>第 14 章 PyStan软件包<a class="headerlink" href="#pystan" title="Permalink to this headline">¶</a></h1>
+<style>p{text-indent:2em;2}</style>
+<p>层次模型是涉及多个参数的数学描述，使得某些参数的可信值有意义地依赖于其他参数的值。例如，考虑同一工厂铸造的几枚硬币。偏向头部的工厂往往会生产偏向头部的硬币。如果我们用ω(希腊字母omega)表示工厂的偏差，我们用θs(其中下标索引不同的硬币)表示硬币的偏差，那么θs的可信值取决于ω的值。对任何一枚硬币的偏差的估计取决于工厂偏差的估计，工厂偏差的估计受到来自所有硬币的数据的影响。有许多现实情况涉及到有意义的层次结构。贝叶斯建模软件使指定和分析复杂的层次模型变得简单明了。本章从最简单的层次模型开始，然后逐步构建更复杂的分层结构。</p>
+<p>有许多数据的示例自然会暗示分层描述。例如，考虑一下不同主要防守位置的棒球运动员的击球能力。这些数据包括(I)每个球员得到的安打次数，(Ii)击球机会的数量，以及(Iii)球员的主要防守位置。每个球员的能力由一个参数θs来描述，该参数取决于一个参数ω，该参数描述了处于该防守位置的球员的典型能力。作为另一个例子，考虑一个孩子在不同地区的不同学校从学校自助餐厅购买午餐的概率。这些数据包括(I)每个孩子购买午餐的天数，(Ii)孩子上学的天数，以及(Iii)孩子所在的学校和学区。每个孩子的概率由参数θs描述，该参数取决于描述学校孩子的典型购买概率的参数ω。在本例中，可以将层次结构扩展到更高的级别，在该级别中，附加参数描述了地区的购买概率。作为另一个例子，考虑患者从不同城市不同医院内不同外科团队进行的心脏手术中康复的概率。在这种情况下，我们可以把每个外科团队看作一枚硬币，病人的结果就是外科团队硬币的翻转。这些数据包括(I)康复次数，(Ii)手术次数，以及(Iii)手术的医院和城市。每个团队的概率由参数θs描述，该参数取决于描述医院典型康复概率的参数ω。我们可以扩展层次结构来估计城市的典型复苏概率。在所有这些例子中，使分层建模非常有效的是，每个个体参数的估计同时由来自所有其他个体的数据通知，因为所有个体通知更高级别的参数，而高层参数反过来约束所有个体参数。这些参数之间的结构依赖关系提供了对所有参数的更好的知情估计。</p>
+<p>层次模型中不同层次的参数都只是共存于联合参数空间中的参数。我们只需将贝叶斯规则应用于联合参数空间，就像我们在图7.5，第167页估计两个硬币偏向时所做的那样。用我们的参数θ和ω更正式地说，B a y e s‘r u l e适用于联合参数空间：p(θ，ω|D)∝p(D|θ，ω)p(θ，ω)。Wh a t i s s p e c i a l to Hierarchy Models是右侧的术语可以分解成一个依赖链，如下所示：
+$<span class="math notranslate nohighlight">\(
+\begin{aligned} p(\theta, \omega \mid D) &amp; \propto p(D \mid \theta, \omega) p(\theta, \omega) \\ &amp;=p(D \mid \theta) p(\theta \mid \omega) p(\omega) \end{aligned}
+\)</span>$
+第二行中的重构意味着数据仅依赖于θ的值，也就是说，当设置值θ时，数据独立于所有其他参数值。此外，θ的值取决于ω的值，而θ的值有条件地独立于所有其他参数。任何可以分解成依赖链(如公式9.1)的模型都是层次模型。</p>
+<p>许多多参数模型可以重新参数化，这意味着可以通过重新组合参数来重新表达相同的数学结构。例如，一个矩形可以用它的长度和宽度来描述，或者用它的面积和纵横比来描述(其中面积是长度乘以宽度，长宽比是长度除以宽度)。在一个参数化下可以分解为依赖链的模型可能不会有一个简单的分解为另一个参数化下的依赖链。因此，模型相对于特定的参数化是分层的。我们选择一个对手头的应用程序有意义和有用的参数化。</p>
+<p>参数之间的依赖关系在几个方面变得有用。首先，依赖关系对于给定的应用程序是有意义的。其次，由于参数之间的相关性，所有数据可以联合通知所有参数估计。第三，相关性可以促进从后验分布进行有效的蒙特卡罗抽样，因为聪明的算法可以利用条件分布(例如，回想一下，Gibbs抽样使用条件分布)。</p>
+<p>像往常一样，我们考虑抛硬币的场景，因为数学相对简单，概念可以详细地说明。和往常一样，要记住掷硬币只是真实世界数据的替代品，这些数据涉及两种结果，例如治疗后疾病的恢复或不恢复、回忆或忘记研究的项目、在选举中选择候选人A或候选人B等等。在本章的后面部分，我们将看到涉及治疗性触摸、超感官知觉和棒球击球能力的真实数据的应用。在这一章的后面部分，我们将看到应用于真实数据的应用，包括治疗性触摸、超感官感知和棒球击球能力</p>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="chapter13.html" title="previous page">第 13 章 目的、动力和样本量</a>
+    <a class='right-next' id="next-link" href="chapter15.html" title="next page">第 15 章 广义线性模型概述</a>
 
         </div>
         

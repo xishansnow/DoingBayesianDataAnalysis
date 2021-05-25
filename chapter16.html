@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; 贝叶斯统计原理</title>
+    <title>第 16 章 一组或两组连续型预测变量 &#8212; 贝叶斯统计原理</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,8 +49,10 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="第 17 章 使用一个连续预测器的连续预测变量" href="chapter17.html" />
+    <link rel="prev" title="第 15 章 广义线性模型概述" href="chapter15.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -176,14 +178,14 @@
   第三篇 应用篇
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="chapter15.html">
    第 15 章 广义线性模型概述
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="chapter16.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    第 16 章 一组或两组连续型预测变量
   </a>
  </li>
@@ -265,6 +267,23 @@
             </button>
             
             
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/chapter16.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
             <!-- Full screen (wrap in <a> to have style consistency -->
@@ -289,19 +308,40 @@
         
               <div>
                 
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="id1">
+<h1>第 16 章 一组或两组连续型预测变量<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<style>p{text-indent:2em;2}</style>
+<p>在本章中，我们考虑这样一种情况，在这种情况下，我们有一个连续型预测变量，可以观察到一个或两个组中的项目。例如，我们可以测量从大学一年级学生(即，一组)中随机抽样的人的血压(即，度量变量)。在这种情况下，我们可能会感兴趣的是，这组人的典型血压与联邦机构公布的该年龄段人群的推荐值相差多少。作为另一个例子，我们可以测量从所有自称素食者(即一组人)中随机抽取的人的智商(即度量变量)。在这种情况下，我们可能感兴趣的是，这个群体的智商与普通人群的平均智商(100)相差有多大。</p>
+<p>在上一章介绍的广义线性模型(GLM)的背景下，本章的情况涉及GLM的线性核心的最微不足道的情况，如Table15.1(p.434)的左侧单元格所示，链接函数是描述数据中噪声的恒等式和正态分布，如Table15.2(p.443)的第一行所示。我们将探索正态分布参数的先验分布的选择，以及参数的贝叶斯估计方法。我们还将考虑替代噪声分布来描述具有异常值的数据。</p>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="chapter15.html" title="previous page">第 15 章 广义线性模型概述</a>
+    <a class='right-next' id="next-link" href="chapter17.html" title="next page">第 17 章 使用一个连续预测器的连续预测变量</a>
 
         </div>
         

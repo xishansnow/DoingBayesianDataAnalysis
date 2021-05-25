@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; 贝叶斯统计原理</title>
+    <title>第 21 章 二值预测变量 &#8212; 贝叶斯统计原理</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,8 +49,10 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="第 22 章 定类预测变量" href="chapter22.html" />
+    <link rel="prev" title="第 20 章 使用多个定类预测器的连续预测变量" href="chapter20.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -176,7 +178,7 @@
   第三篇 应用篇
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="chapter15.html">
    第 15 章 广义线性模型概述
@@ -207,8 +209,8 @@
    第 20 章 使用多个定类预测器的连续预测变量
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="chapter21.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    第 21 章 二值预测变量
   </a>
  </li>
@@ -265,6 +267,23 @@
             </button>
             
             
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/chapter21.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
             <!-- Full screen (wrap in <a> to have style consistency -->
@@ -289,19 +308,41 @@
         
               <div>
                 
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="id1">
+<h1>第 21 章 二值预测变量<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<style>p{text-indent:2em;2}</style>
+<p>本章考虑由二分预测变量组成的数据结构。这本书的前几章集中在这种类型的数据上，但现在我们根据广义线性模型重新构建分析框架。在实际研究中，经常会遇到本章所考虑的数据结构类型。例如，我们可能想要根据身高和体重来预测人口统计学研究中的一个人是男性还是女性。或者，我们可能想根据一个人的年收入来预测他是否会投票。或者，我们可能想要根据棒球击球手的主要防守位置来预测他们是否会被击出一支安打。</p>
+<p>这类数据结构的传统处理称为“逻辑回归”。“。在贝叶斯软件中，很容易对传统模型进行泛化，使其对异常值具有健壮性，允许名义预测值的级别内存在不同的方差，并且具有分层结构，以便在适当的级别或因素之间共享信息</p>
+<p>在第15章介绍的广义线性模型(GLM)的背景下，本章的情况涉及逻辑上的逆链接函数以及用于描述数据中的噪声的伯努利分布，如T able15.2(p.443)第二行所示。有关本章预测变量和预测变量的组合如何与其他组合相关的提示，请参阅T able15.3(第444页)。</p>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="chapter20.html" title="previous page">第 20 章 使用多个定类预测器的连续预测变量</a>
+    <a class='right-next' id="next-link" href="chapter22.html" title="next page">第 22 章 定类预测变量</a>
 
         </div>
         
