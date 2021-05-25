@@ -4,75 +4,75 @@
   # numbered: true  
   sections:
     #第一章 
-    - file: part00_basic/chapter01
-      # title: '概述'
+    - file: chapter01
+      #title: '概述'
     #第二章
-    - file: part00_basic/chapter02
-      # title: '可信度、模型和参数'
+    - file: chapter02
+      #title: '可信度、模型和参数'
     #第二章
-    - file: part00_basic/chapter03
-      # title: 'R语言'
+    - file: chapter03
+      #title: 'R语言'
     #第四章
-    - file: part00_basic/chapter04
-      # title: '这个叫概率的东西到底是什么？'
+    - file: chapter04
+      #title: '这个叫概率的东西到底是什么？'
     #第五章
-    - file: part00_basic/chapter05
-      # title: '贝叶斯规则'
+    - file: chapter05
+      #title: '贝叶斯规则'
     
 
 - part:   '第二篇 原理篇'
   # numbered: true  
   sections:
     #第六章
-    - file: part01_bayesian/chapter06
+    - file: chapter06
       # title: '用精确数学分析进行二项概率推断'
     #第七章
-    - file: part01_bayesian/chapter07
+    - file: chapter07
       # title: '马尔可夫蒙特卡洛MCMC'
     #第九章    
-    - file: part01_bayesian/chapter08
+    - file: chapter08
       # title: '贝叶斯层次模型'
       #第九章
-    - file: part01_bayesian/chapter09
+    - file: chapter09
       # title: '贝叶斯层次模型'
       #第九章
-    - file: part01_bayesian/chapter10
+    - file: chapter10
       # title: '贝叶斯层次模型'
       #第九章
-    - file: part01_bayesian/chapter11
+    - file: chapter11
       # title: '贝叶斯层次模型'
       #第九章
-    - file: part01_bayesian/chapter12
+    - file: chapter12
       # title: '贝叶斯层次模型'
-    - file: part01_bayesian/chapter13
+    - file: chapter13
       # title: '贝叶斯层次模型'
-    - file: part01_bayesian/chapter14
+    - file: chapter14
       # title: '贝叶斯层次模型'
     
 
 - part:   '第三篇 应用篇'
   # numbered: true  
   sections:
-    - file: part02_application/chapter15
+    - file: chapter15
       # title: '贝叶斯层次模型'      
-    - file: part02_application/chapter16
+    - file: chapter16
       # title: '贝叶斯层次模型'
-    - file: part02_application/chapter17
+    - file: chapter17
       # title: '贝叶斯层次模型'
-    - file: part02_application/chapter18
+    - file: chapter18
       # title: '贝叶斯层次模型'
-    - file: part02_application/chapter19
+    - file: chapter19
       # title: '贝叶斯层次模型'
-    - file: part02_application/chapter20
+    - file: chapter20
       # title: '贝叶斯层次模型'
-    - file: part02_application/chapter21
+    - file: chapter21
       # title: '贝叶斯层次模型'
-    - file: part02_application/chapter22
+    - file: chapter22
       # title: '贝叶斯层次模型'
-    - file: part02_application/chapter23
+    - file: chapter23
       # title: '贝叶斯层次模型'
-    - file: part02_application/chapter24
+    - file: chapter24
       # title: '贝叶斯层次模型'
-    - file: part02_application/chapter25
+    - file: chapter25
       # title: '贝叶斯层次模型'
     
