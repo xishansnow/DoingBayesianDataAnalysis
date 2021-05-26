@@ -6,13 +6,13 @@ A book for beginners of geographical knowledge graph.
 
 ### 构建本书 Building the book
 
-如果您要继续开发并编译spaceSTAT_CN，则应该：
+如果您要继续开发并编译bayesianPrincipal，则应该：
 If you'd like to develop on and build the bayesianPrincipal book, you should:
 
 - 克隆此仓库，并转到仓库根目录
 - 运行`pip install -r requirements.txt`（建议您在虚拟环境中执行此操作）
 - （推荐）删除现有的`bayesianPrincipal/_build/`目录
--  运行`jupyter-book build spaceSTAT/`
+-  运行`jupyter-book build bayesianPrincipal/`
 
 
 - Clone this repository, go to it's root directory
