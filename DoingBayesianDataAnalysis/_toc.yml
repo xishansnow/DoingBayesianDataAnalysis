@@ -1,78 +1,34 @@
-- file: preface
-
-- part:  '第一篇 基础篇'
-  # numbered: true  
-  sections:
-    #第一章 
-    - file: chapter01
-      #title: '概述'
-    #第二章
-    - file: chapter02
-      #title: '可信度、模型和参数'
-    #第二章
-    - file: chapter03
-      #title: 'R语言'
-    #第四章
-    - file: chapter04
-      #title: '这个叫概率的东西到底是什么？'
-    #第五章
-    - file: chapter05
-      #title: '贝叶斯规则'
-    
-
-- part:   '第二篇 原理篇'
-  # numbered: true  
-  sections:
-    #第六章
-    - file: chapter06
-      # title: '用精确数学分析进行二项概率推断'
-    #第七章
-    - file: chapter07
-      # title: '马尔可夫蒙特卡洛MCMC'
-    #第九章    
-    - file: chapter08
-      # title: '贝叶斯层次模型'
-      #第九章
-    - file: chapter09
-      # title: '贝叶斯层次模型'
-      #第九章
-    - file: chapter10
-      # title: '贝叶斯层次模型'
-      #第九章
-    - file: chapter11
-      # title: '贝叶斯层次模型'
-      #第九章
-    - file: chapter12
-      # title: '贝叶斯层次模型'
-    - file: chapter13
-      # title: '贝叶斯层次模型'
-    - file: chapter14
-      # title: '贝叶斯层次模型'
-    
-
-- part:   '第三篇 应用篇'
-  # numbered: true  
-  sections:
-    - file: chapter15
-      # title: '贝叶斯层次模型'      
-    - file: chapter16
-      # title: '贝叶斯层次模型'
-    - file: chapter17
-      # title: '贝叶斯层次模型'
-    - file: chapter18
-      # title: '贝叶斯层次模型'
-    - file: chapter19
-      # title: '贝叶斯层次模型'
-    - file: chapter20
-      # title: '贝叶斯层次模型'
-    - file: chapter21
-      # title: '贝叶斯层次模型'
-    - file: chapter22
-      # title: '贝叶斯层次模型'
-    - file: chapter23
-      # title: '贝叶斯层次模型'
-    - file: chapter24
-      # title: '贝叶斯层次模型'
-    - file: chapter25
-      # title: '贝叶斯层次模型'
-    
+format: jb-book
+root: preface
+parts:
+- caption: "\u7B2C\u4E00\u7BC7 \u57FA\u7840\u7BC7"
+  chapters:
+  - file: chapter01
+  - file: chapter02
+  - file: chapter03
+  - file: chapter04
+  - file: chapter05
+- caption: "\u7B2C\u4E8C\u7BC7 \u539F\u7406\u7BC7"
+  chapters:
+  - file: chapter06
+  - file: chapter07
+  - file: chapter08
+  - file: chapter09
+  - file: chapter10
+  - file: chapter11
+  - file: chapter12
+  - file: chapter13
+  - file: chapter14
+- caption: "\u7B2C\u4E09\u7BC7 \u5E94\u7528\u7BC7"
+  chapters:
+  - file: chapter15
+  - file: chapter16
+  - file: chapter17
+  - file: chapter18
+  - file: chapter19
+  - file: chapter20
+  - file: chapter21
+  - file: chapter22
+  - file: chapter23
+  - file: chapter24
+  - file: chapter25
