@@ -1,14 +1,14 @@
 format: jb-book
 root: preface
 parts:
-- caption: "\u7B2C\u4E00\u7BC7 \u57FA\u7840\u7BC7"
+- caption: "第一篇 基础模型、概率和贝叶斯原理"
   chapters:
   - file: chapter01
   - file: chapter02
   - file: chapter03
   - file: chapter04
   - file: chapter05
-- caption: "\u7B2C\u4E8C\u7BC7 \u539F\u7406\u7BC7"
+- caption: "第二篇 贝叶斯推断的基础知识"
   chapters:
   - file: chapter06
   - file: chapter07
@@ -19,7 +19,7 @@ parts:
   - file: chapter12
   - file: chapter13
   - file: chapter14
-- caption: "\u7B2C\u4E09\u7BC7 \u5E94\u7528\u7BC7"
+- caption: "第三篇 广义线性模型"
   chapters:
   - file: chapter15
   - file: chapter16
